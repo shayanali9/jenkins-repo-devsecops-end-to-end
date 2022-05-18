@@ -17,7 +17,7 @@ pipeline {
         } 
 		stage('RunDASTUsingZAP') {
             steps {		
-				bat("D:\\software\\ZAP\\zap.bat -cmd -quickurl https://www.example.com -quickprogress -quickout zap_report.html")
+				bat("D:\\software\\ZAP\\zap.sh -cmd -quickurl https://www.example.com -quickprogress -quickout zap_report.html")
 			}
         } 
     }
