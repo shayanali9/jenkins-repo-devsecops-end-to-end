@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('CompileandRunSonarAnalysis') {
             steps {		
-				bat("mvn -Dmaven.test.failure.ignore verify sonar:sonar -Dsonar.login=f357891511a76339f7c8701fdc543f062c755454 -Dsonar.projectKey=gcpvulnerableprojectkey -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=gcpsourcecodereposcan")
+				bat("mvn -Dmaven.test.failure.ignore verify sonar:sonar -Dsonar.login=89d87d7ec2e37aa36fad0ba3e6a2cd61c53aeebd -Dsonar.projectKey=simplemavenproject -Dsonar.host.url=http://127.0.0.1:9000/")
 			}
         } 
 		stage('RunSCAAnalysisUsingSnyk') {
