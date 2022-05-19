@@ -12,7 +12,7 @@ pipeline {
         } 
 		stage('RunSCAAnalysisUsingSnyk') {
             steps {		
-				bat("mvn snyk:test -fn ")
+				bat("mvn snyk:test -fn")
 			}
         } 
 		stage('RunDASTUsingZAP') {
