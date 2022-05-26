@@ -8,7 +8,7 @@ pipeline {
         stage('CompileandRunSonarAnalysis') {
             steps {	
 		    withCredentials([string(credentialsId: 'sonarTokenId', variable: 'SONAR_TOKEN')]) {
-				bat("mvn -Dmaven.test.failure.ignore verify sonar:sonar -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=simplemavenproject -Dsonar.host.url=http://127.0.0.1:9000/")
+				bat("mvn -Dmaven.test.failure.ignore verify sonar:sonar -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=simplemavenproject -Dsonar.host.url=http://localhost:9000/")
 		    }
 			}
         } 
